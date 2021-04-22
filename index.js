@@ -149,6 +149,9 @@ class Airplane {
      grade(student, subject){
        return `${student.name} receives a perfect score on ${subject}`;
      }
+     randomGrader(){
+       student.grade += Math.floor(Math.random()*100) 
+     }
  }
   /*
     TASK 5
@@ -172,6 +175,7 @@ class Airplane {
        this.previousBackground = props.previousBackground,
        this.className = props.className,
        this.favSubjects = props.favSubjects
+       this.grade = 99;
      }
    }
     listSubjects(){
@@ -182,6 +186,13 @@ class Airplane {
     }
     sprintChallenge(subject){
       return `${this.name} has begun sprint challenge on ${subject}`;
+    }
+    graduate(){
+      if(this.grade > 70){
+        return `Congrats, ${this.name} has a grade of ${this.grade} and is ready to graduate!`;
+      } else {
+        return `Sorry, ${this.name} has a grade of ${this.grade} and isn't ready to graduate. Keep studying!`
+      }
     }
  }
   
